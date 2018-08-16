@@ -111,6 +111,12 @@ export default {
   created() {
     this.bodyClass();
   },
+  mounted() {
+    this.$notify({
+      title: "asdfsa",
+      subtitle: "asdfsadf"
+    });
+  },
   methods: {
     bodyClass() {
       if (this.publicRoute) {
