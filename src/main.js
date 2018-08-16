@@ -23,7 +23,8 @@ import { i18n } from "./lang/";
 import store from "./store/";
 import api from "./api";
 import helpers from "./helpers";
-import notify from "./notify";
+// import notify from "./notify";
+import notify from "./notifications";
 import events from "./events/";
 
 Vue.config.productionTip = false;
