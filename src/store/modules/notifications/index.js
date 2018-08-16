@@ -5,6 +5,10 @@ const state = {
     {
       title: "Test",
       subtitle: "description"
+    },
+    {
+      title: "Test2",
+      subtitle: "asdfasdfasf"
     }
   ]
 };
