@@ -1,6 +1,6 @@
 <template>
   <div class="notifications">        
-      <v-item v-for="(item, index) in notifications" :key="index"></v-item>      
+      <v-item v-for="(notification, index) in notifications" :key="index" :item="notification"/>      
   </div> 
 </template>
 <script>
