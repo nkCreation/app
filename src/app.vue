@@ -112,10 +112,29 @@ export default {
     this.bodyClass();
   },
   mounted() {
-    this.$notify({
-      title: "asdfsa",
-      subtitle: "asdfsadf"
-    });
+    //TODO: Don't forget to remove
+    const $notify = this.$notify;
+    setTimeout(function() {
+      $notify({
+        title: "First",
+        subtitle: "asdfsadf",
+        delay: 6000
+      });
+    }, 3000);
+    setTimeout(function() {
+      $notify({
+        title: "Second",
+        subtitle: "asdfsadf",
+        delay: 2500
+      });
+    }, 5000);
+    setTimeout(function() {
+      $notify({
+        title: "Third",
+        subtitle: "asdfsadf",
+        delay: 3000
+      });
+    }, 7000);
   },
   methods: {
     bodyClass() {
