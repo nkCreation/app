@@ -1,16 +1,7 @@
 import mutations from "./mutations";
 
 const state = {
-  queue: [
-    {
-      title: "Test",
-      subtitle: "description"
-    },
-    {
-      title: "Test2",
-      subtitle: "asdfasdfasf"
-    }
-  ]
+  queue: []
 };
 
 export default {

@@ -1,6 +1,8 @@
 <template>
-  <div class="notifications">        
-      <v-item v-for="(notification, index) in notifications" :key="index" :item="notification"/>      
+  <div class="notifications">
+    <transition-group name="slide-fade" tag="div">     
+        <v-item v-for="(notification, index) in notifications" :key="index" :item="notification"/>
+    </transition-group>
   </div> 
 </template>
 <script>
@@ -26,5 +28,16 @@ export default {
   right: 10px;
   bottom: 10px;
   width: 340px;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(30px);
+  opacity: 0;
 }
 </style>
