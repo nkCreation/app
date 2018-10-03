@@ -30,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    this.startItemTimeout();
+    // this.startItemTimeout();
   }
 };
 </script>
@@ -41,6 +41,7 @@ export default {
   border: var(--input-border-width) solid var(--lighter-gray);
   border-radius: 5px;
   margin-bottom: 8px;
-  transition: all 0.2s ease-out;
+  background-color: var(--lightest-gray);
+  transition: all var(--medium) ease-out;
 }
 </style>
