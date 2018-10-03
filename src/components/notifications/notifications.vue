@@ -28,12 +28,13 @@ export default {
   right: 10px;
   bottom: 10px;
   width: 340px;
+  z-index: 999;
 }
 .slide-fade-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all var(--medium) ease-out;
 }
 .slide-fade-leave-active {
-  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all var(--slow) cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
