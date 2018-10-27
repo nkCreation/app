@@ -27,7 +27,7 @@ export default {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  width: 340px;
+  width: 300px;
   z-index: 999;
 }
 .slide-fade-enter-active {
