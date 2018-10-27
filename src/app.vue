@@ -131,8 +131,8 @@ export default {
     setTimeout(function() {
       $notify({
         title: "Third",
-        subtitle: "asdfsadf",
-        delay: 3000
+        subtitle: "asdfsadf"
+        // delay: 3000
       });
     }, 7000);
   },

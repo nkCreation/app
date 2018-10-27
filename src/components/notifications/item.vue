@@ -1,7 +1,11 @@
 <template>
-    <div class="notification">{{item.title}}
-        <p>{{item.subtitle}}</p>
-        {{item.id}}
+    <div class="notification">
+        <div class="icon-main"><i class="material-icons">cloud_off</i></div>
+        <div class="content">
+        {{item.title}}
+        <p>{{item.subtitle}}</p>        
+        </div>
+        <div class="icon-right"><i class="material-icons">arrow_forward</i></div>
     </div>
 </template>
 <script>
@@ -30,18 +34,39 @@ export default {
     }
   },
   mounted() {
-    // this.startItemTimeout();
+    this.startItemTimeout();
   }
 };
 </script>
 <style scoped>
 .notification {
-  min-height: 70px;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
   width: 100%;
   border: var(--input-border-width) solid var(--lighter-gray);
   border-radius: 5px;
   margin-bottom: 8px;
-  background-color: var(--lightest-gray);
+  padding: 10px;
+  background-color: var(--white);
   transition: all var(--medium) ease-out;
+}
+.icon-main {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--lighter-gray);
+}
+.icon-right {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  color: var(--lighter-gray);
+}
+.content {
+  padding-left: 10px;
 }
 </style>
