@@ -2,8 +2,8 @@
     <div class="notification">
         <div class="icon-main"><i class="material-icons">cloud_off</i></div>
         <div class="content">
-        {{item.title}}
-        <p>{{item.subtitle}}</p>        
+          <div class="title">{{item.title}}</div>
+          <div class="details">{{item.subtitle}}</div>
         </div>
         <div class="icon-right"><i class="material-icons">arrow_forward</i></div>
     </div>
@@ -38,7 +38,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .notification {
   display: flex;
   align-items: center;
@@ -51,6 +51,7 @@ export default {
   background-color: var(--white);
   transition: all var(--medium) ease-out;
 }
+
 .icon-main {
   width: 40px;
   height: 40px;
@@ -60,13 +61,29 @@ export default {
   border-radius: 50%;
   background-color: var(--lighter-gray);
 }
+
 .icon-right {
   width: 20px;
   height: 20px;
   margin-left: auto;
   color: var(--lighter-gray);
+  transition: color var(--fast) var(--transition);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--light-gray);
+  }
 }
+
 .content {
   padding-left: 10px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.details {
+  color: var(--light-gray);
 }
 </style>
