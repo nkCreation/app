@@ -1,5 +1,5 @@
 <template>
-    <div class="notification">
+    <div class="notification" :class="item.type">
         <div class="icon-main"><i class="material-icons">cloud_off</i></div>
         <div class="content">
           <div class="title">{{item.title}}</div>
@@ -85,5 +85,41 @@ export default {
 
 .details {
   color: var(--light-gray);
+}
+
+.error {
+  .icon-main {
+    background-color: var(--red-100);
+    i {
+      color: var(--red-500);
+    }
+  }
+}
+
+.success {
+  .icon-main {
+    background-color: var(--green-100);
+    i {
+      color: var(--green-500);
+    }
+  }
+}
+
+.warning {
+  .icon-main {
+    background-color: var(--amber-100);
+    i {
+      color: var(--amber-500);
+    }
+  }
+}
+
+.info {
+  .icon-main {
+    background-color: var(--blue-100);
+    i {
+      color: var(--blue-500);
+    }
+  }
 }
 </style>
