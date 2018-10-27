@@ -118,23 +118,41 @@ export default {
       $notify({
         title: "First",
         subtitle: "asdfsadf",
-        delay: 6000
+        // delay: 6000,
+        type: "error"
       });
     }, 3000);
     setTimeout(function() {
       $notify({
         title: "Second",
         subtitle: "asdfsadf",
-        delay: 2500
+        // delay: 2500,
+        type: "success"
       });
     }, 5000);
+    setTimeout(function() {
+      $notify({
+        title: "Second",
+        subtitle: "asdfsadf",
+        // delay: 2500,
+        type: "warning"
+      });
+    }, 7000);
+    setTimeout(function() {
+      $notify({
+        title: "Third",
+        subtitle: "asdfsadf",
+        type: "info"
+        // delay: 3000
+      });
+    }, 9000);
     setTimeout(function() {
       $notify({
         title: "Third",
         subtitle: "asdfsadf"
         // delay: 3000
       });
-    }, 7000);
+    }, 10000);
   },
   methods: {
     bodyClass() {
