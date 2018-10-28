@@ -111,64 +111,6 @@ export default {
   created() {
     this.bodyClass();
   },
-  mounted() {
-    //TODO: Don't forget to remove
-    const $notify = this.$notify;
-    const $router = this.$router;
-    setTimeout(function() {
-      $notify({
-        title: "Upload error",
-        details: "There was an error while trying to upload the item",
-        delay: 0,
-        iconMain: "cloud_off",
-        // iconRight: "arrow_forward",
-        type: "error"
-      });
-    }, 3000);
-    setTimeout(function() {
-      $notify({
-        title: "Connection lost",
-        details: "You seem to be offline",
-        iconRight: "refresh",
-        iconMain: "warning",
-        delay: 0,
-        type: "warning"
-      });
-    }, 5000);
-    setTimeout(function() {
-      $notify({
-        title: "Item created sucessfully",
-        details: "Your item was created",
-        // iconRight: "arrow_forward",
-        iconMain: "check",
-        delay: 0,
-        type: "success",
-        onclick: "sadfasdfa"
-      });
-    }, 7000);
-    setTimeout(function() {
-      $notify({
-        title: "New mention",
-        details: "Click to see the comment",
-        iconRight: "arrow_forward",
-        iconMain: "message",
-        type: "info",
-        delay: 0,
-        clickCallback: () => {
-          $router.push("/activity");
-        }
-      });
-    }, 9000);
-    setTimeout(function() {
-      $notify({
-        title: "Two factor authentication",
-        details: "Click to enable 2FA ",
-        iconRight: "edit",
-        iconMain: "lock",
-        delay: 0
-      });
-    }, 10000);
-  },
   methods: {
     bodyClass() {
       if (this.publicRoute) {
