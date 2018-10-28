@@ -1,11 +1,11 @@
 <template>
     <div class="notification" :class="item.type">
-        <div class="icon-main"><i class="material-icons">cloud_off</i></div>
+        <div class="icon-main"><i class="material-icons">{{item.iconMain}}</i></div>
         <div class="content">
           <div class="title">{{item.title}}</div>
           <div class="details">{{item.subtitle}}</div>
         </div>
-        <div class="icon-right"><i class="material-icons">arrow_forward</i></div>
+        <div class="icon-right"><i class="material-icons">{{item.iconRight}}</i></div>
     </div>
 </template>
 <script>
@@ -55,6 +55,7 @@ export default {
 .icon-main {
   width: 40px;
   height: 40px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +78,7 @@ export default {
 
 .content {
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .title {

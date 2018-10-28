@@ -116,40 +116,50 @@ export default {
     const $notify = this.$notify;
     setTimeout(function() {
       $notify({
-        title: "First",
-        subtitle: "asdfsadf",
+        title: "Upload error",
+        subtitle: "There was an error while trying to upload the item",
         // delay: 6000,
+        iconMain: "cloud_off",
+        // iconRight: "arrow_forward",
         type: "error"
       });
     }, 3000);
     setTimeout(function() {
       $notify({
-        title: "Second",
-        subtitle: "asdfsadf",
+        title: "Connection lost",
+        subtitle: "You seem to be offline",
+        iconRight: "refresh",
+        iconMain: "warning",
         // delay: 2500,
-        type: "success"
+        type: "warning"
       });
     }, 5000);
     setTimeout(function() {
       $notify({
-        title: "Second",
-        subtitle: "asdfsadf",
+        title: "Item created sucessfully",
+        subtitle: "Your item was created",
+        // iconRight: "arrow_forward",
+        iconMain: "check",
         // delay: 2500,
-        type: "warning"
+        type: "success"
       });
     }, 7000);
     setTimeout(function() {
       $notify({
-        title: "Third",
-        subtitle: "asdfsadf",
+        title: "New mention",
+        subtitle: "Click to see the comment",
+        iconRight: "arrow_forward",
+        iconMain: "message",
         type: "info"
         // delay: 3000
       });
     }, 9000);
     setTimeout(function() {
       $notify({
-        title: "Third",
-        subtitle: "asdfsadf"
+        title: "Two factor authentication",
+        subtitle: "Click to enable 2FA ",
+        iconRight: "edit",
+        iconMain: "lock"
         // delay: 3000
       });
     }, 10000);
