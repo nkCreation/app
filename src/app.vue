@@ -114,10 +114,11 @@ export default {
   mounted() {
     //TODO: Don't forget to remove
     const $notify = this.$notify;
+    const $router = this.$router;
     setTimeout(function() {
       $notify({
         title: "Upload error",
-        subtitle: "There was an error while trying to upload the item",
+        details: "There was an error while trying to upload the item",
         delay: 0,
         iconMain: "cloud_off",
         // iconRight: "arrow_forward",
@@ -127,7 +128,7 @@ export default {
     setTimeout(function() {
       $notify({
         title: "Connection lost",
-        subtitle: "You seem to be offline",
+        details: "You seem to be offline",
         iconRight: "refresh",
         iconMain: "warning",
         delay: 0,
@@ -137,27 +138,31 @@ export default {
     setTimeout(function() {
       $notify({
         title: "Item created sucessfully",
-        subtitle: "Your item was created",
+        details: "Your item was created",
         // iconRight: "arrow_forward",
         iconMain: "check",
         delay: 0,
-        type: "success"
+        type: "success",
+        onclick: "sadfasdfa"
       });
     }, 7000);
     setTimeout(function() {
       $notify({
         title: "New mention",
-        subtitle: "Click to see the comment",
+        details: "Click to see the comment",
         iconRight: "arrow_forward",
         iconMain: "message",
         type: "info",
-        delay: 0
+        delay: 0,
+        clickCallback: () => {
+          $router.push("/activity");
+        }
       });
     }, 9000);
     setTimeout(function() {
       $notify({
         title: "Two factor authentication",
-        subtitle: "Click to enable 2FA ",
+        details: "Click to enable 2FA ",
         iconRight: "edit",
         iconMain: "lock",
         delay: 0

@@ -1,6 +1,6 @@
 <template>
   <div class="notifications">
-    <transition-group name="slide-fade" tag="div">     
+    <transition-group name="slide-fade" tag="div" mode="out-in">     
         <v-item v-for="(notification, index) in notifications" :key="index" :item="notification"/>
     </transition-group>
   </div> 

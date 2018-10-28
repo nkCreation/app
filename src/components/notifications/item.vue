@@ -3,9 +3,9 @@
         <div class="icon-main"><i class="material-icons">{{item.iconMain}}</i></div>
         <div class="content">
           <div class="title">{{item.title}}</div>
-          <div class="details">{{item.subtitle}}</div>
+          <div class="details">{{item.details}}</div>
         </div>
-        <div class="icon-right"><i class="material-icons">{{item.iconRight}}</i></div>
+        <div class="icon-right" @click="actionClick"><i class="material-icons">{{item.iconRight}}</i></div>
     </div>
 </template>
 <script>
@@ -31,6 +31,13 @@ export default {
     },
     removeItemFromStore() {
       this.$store.commit(REMOVE_NOTIFICATION, this.item.id);
+    },
+    actionClick() {
+      if (!(this.item.clickCallback instanceof Function)) {
+        throw new Error("Notification callback is not a function");
+      }
+      this.item.clickCallback();
+      this.removeItemFromStore();
     }
   },
   mounted() {
