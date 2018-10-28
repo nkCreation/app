@@ -56,7 +56,6 @@ export default {
   margin-bottom: 8px;
   padding: 10px;
   background-color: var(--white);
-  transition: all var(--medium) ease-out;
 }
 
 .icon-main {
