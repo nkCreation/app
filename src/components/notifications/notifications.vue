@@ -26,7 +26,7 @@ export default {
 .notifications {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  bottom: 0;
   width: 300px;
   z-index: 999;
 }
