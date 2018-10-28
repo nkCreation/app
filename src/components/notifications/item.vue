@@ -25,7 +25,7 @@ export default {
   methods: {
     ...mapMutations("notifications", [REMOVE_NOTIFICATION]),
     startItemTimeout() {
-      if (this.item.delay !== undefined) {
+      if (this.item.delay !== undefined && this.item.delay > 0) {
         setTimeout(this.removeItemFromStore.bind(this), this.item.delay);
       }
     },
