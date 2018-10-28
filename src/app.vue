@@ -118,7 +118,7 @@ export default {
       $notify({
         title: "Upload error",
         subtitle: "There was an error while trying to upload the item",
-        // delay: 6000,
+        delay: 0,
         iconMain: "cloud_off",
         // iconRight: "arrow_forward",
         type: "error"
@@ -130,7 +130,7 @@ export default {
         subtitle: "You seem to be offline",
         iconRight: "refresh",
         iconMain: "warning",
-        // delay: 2500,
+        delay: 0,
         type: "warning"
       });
     }, 5000);
@@ -140,7 +140,7 @@ export default {
         subtitle: "Your item was created",
         // iconRight: "arrow_forward",
         iconMain: "check",
-        // delay: 2500,
+        delay: 0,
         type: "success"
       });
     }, 7000);
@@ -150,8 +150,8 @@ export default {
         subtitle: "Click to see the comment",
         iconRight: "arrow_forward",
         iconMain: "message",
-        type: "info"
-        // delay: 3000
+        type: "info",
+        delay: 0
       });
     }, 9000);
     setTimeout(function() {
@@ -159,8 +159,8 @@ export default {
         title: "Two factor authentication",
         subtitle: "Click to enable 2FA ",
         iconRight: "edit",
-        iconMain: "lock"
-        // delay: 3000
+        iconMain: "lock",
+        delay: 0
       });
     }, 10000);
   },
