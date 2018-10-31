@@ -3,7 +3,7 @@
         <div class="icon-main"><i class="material-icons">{{item.iconMain}}</i></div>
         <div class="content">
           <div class="title">{{item.title}}</div>
-          <div class="details">{{item.details}}</div>
+          <div class="details" v-html="detailHtml"></div>
         </div>
         <div class="icon-right" @click="actionClick"><i class="material-icons">{{item.iconRight}}</i></div>
     </div>
@@ -20,6 +20,11 @@ export default {
     item: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    detailHtml() {
+      return this.$helpers.snarkdown(this.item.details);
     }
   },
   methods: {

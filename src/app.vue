@@ -136,7 +136,7 @@ export default {
     setTimeout(function() {
       $notify({
         title: "Upload error",
-        details: "There was an error while trying to upload the item",
+        details: "There was an **error** while trying to upload the item",
         iconMain: "cloud_off",
         // iconRight: "arrow_forward",
         delay: 0,
