@@ -12,9 +12,6 @@ export default {
   components: {
     VItem
   },
-  data() {
-    return {};
-  },
   computed: {
     notifications() {
       return this.$store.state.notifications.queue;

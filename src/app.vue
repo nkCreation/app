@@ -42,7 +42,7 @@
 <script>
 import VBlocker from "./components/blocker.vue";
 import VError from "./components/error.vue";
-import { TOGGLE_NAV } from "./store/mutation-types";
+import { TOGGLE_NAV } from "./store/mutation-colors";
 import VNavSidebar from "./components/sidebars/nav-sidebar/nav-sidebar.vue";
 import VNotification from "./components/notifications/notifications.vue";
 
@@ -139,8 +139,8 @@ export default {
         details: "There was an **error** while trying to upload the item",
         iconMain: "cloud_off",
         // iconRight: "arrow_forward",
-        delay: 0,
-        type: "error"
+        delay: 5000,
+        color: "red"
       });
     }, 3000);
     setTimeout(function() {
@@ -150,8 +150,8 @@ export default {
         iconRight: "refresh",
         iconMain: "warning",
         delay: 0,
-        type: "warning",
-        clickCallback: () => {}
+        color: "amber",
+        onClick: () => {}
       });
     }, 4000);
     setTimeout(function() {
@@ -161,7 +161,7 @@ export default {
         // iconRight: "arrow_forward",
         iconMain: "check",
         delay: 0,
-        type: "success",
+        color: "green",
         onclick: "sadfasdfa"
       });
     }, 5000);
@@ -171,9 +171,9 @@ export default {
         details: "Click to see the comment",
         iconRight: "arrow_forward",
         iconMain: "message",
-        type: "info",
+        color: "blue",
         delay: 0,
-        clickCallback: () => {
+        onClick: () => {
           $router.push("/activity");
         }
       });
@@ -185,7 +185,7 @@ export default {
         iconRight: "edit",
         iconMain: "lock",
         delay: 0,
-        clickCallback: () => {}
+        onClick: () => {}
       });
     }, 7000);
   }

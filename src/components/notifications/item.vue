@@ -1,6 +1,6 @@
 <template>
     <div class="notification" :class="item.type">
-        <div class="icon-main"><i class="material-icons">{{item.iconMain}}</i></div>
+        <div class="icon-main" :style="{backgroundColor: ringColor}"><i class="material-icons" :style="{color: iconColor}">{{item.iconMain}}</i></div>
         <div class="content">
           <div class="title">{{item.title}}</div>
           <div class="details" v-html="detailHtml"></div>
@@ -13,9 +13,6 @@ import { mapMutations } from "vuex";
 import { REMOVE_NOTIFICATION } from "@/store/mutation-types";
 export default {
   name: "v-item",
-  data() {
-    return {};
-  },
   props: {
     item: {
       type: Object,
@@ -25,23 +22,29 @@ export default {
   computed: {
     detailHtml() {
       return this.$helpers.snarkdown(this.item.details);
+    },
+    iconColor() {
+      return `var(--${this.item.color}-500)`;
+    },
+    ringColor() {
+      return `var(--${this.item.color}-100)`;
     }
   },
   methods: {
     ...mapMutations("notifications", [REMOVE_NOTIFICATION]),
     startItemTimeout() {
       if (this.item.delay !== undefined && this.item.delay > 0) {
-        setTimeout(this.removeItemFromStore.bind(this), this.item.delay);
+        setTimeout(() => this.removeItemFromStore(), this.item.delay);
       }
     },
     removeItemFromStore() {
       this.$store.commit(REMOVE_NOTIFICATION, this.item.id);
     },
     actionClick() {
-      if (!(this.item.clickCallback instanceof Function)) {
+      if (!(this.item.onClick instanceof Function)) {
         throw new Error("Notification callback is not a function");
       }
-      this.item.clickCallback();
+      this.item.onClick();
       this.removeItemFromStore();
     }
   },
