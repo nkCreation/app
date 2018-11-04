@@ -42,7 +42,7 @@
 <script>
 import VBlocker from "./components/blocker.vue";
 import VError from "./components/error.vue";
-import { TOGGLE_NAV } from "./store/mutation-colors";
+import { TOGGLE_NAV } from "./store/mutation-types";
 import VNavSidebar from "./components/sidebars/nav-sidebar/nav-sidebar.vue";
 import VNotification from "./components/notifications/notifications.vue";
 
