@@ -23,11 +23,11 @@ export default {
     detailHtml() {
       return this.$helpers.snarkdown(this.item.details);
     },
-    iconColor() {
-      return `var(--${this.item.color}-500)`;
+    iconColor() {    
+      return this.item.color !== undefined ? `var(--${this.item.color}-500)` : 'var(--blue-grey-500)';
     },
     ringColor() {
-      return `var(--${this.item.color}-100)`;
+      return this.item.color !== undefined ? `var(--${this.item.color}-100)` : 'var(--blue-grey-100)';
     }
   },
   methods: {
