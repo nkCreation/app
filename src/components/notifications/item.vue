@@ -21,7 +21,9 @@ export default {
   },
   computed: {
     detailHtml() {
-      return this.$helpers.snarkdown(this.item.details);
+      return this.item.details !== undefined
+        ? this.$helpers.snarkdown(this.item.details)
+        : "";
     },
     iconColor() {
       return this.item.color !== undefined
