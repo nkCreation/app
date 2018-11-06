@@ -129,65 +129,6 @@ export default {
     discardChanges() {
       this.$store.dispatch("discardChanges");
     }
-  },
-  mounted() {
-    const $notify = this.$notify;
-    const $router = this.$router;
-    setTimeout(function() {
-      $notify({
-        title: "Upload error",
-        details: "There was an **error** while trying to upload the item",
-        iconMain: "cloud_off",
-        // iconRight: "arrow_forward",
-        delay: 5000,
-        color: "red"
-      });
-    }, 3000);
-    setTimeout(function() {
-      $notify({
-        title: "Connection lost",
-        details: "You seem to be offline",
-        iconRight: "refresh",
-        iconMain: "warning",
-        delay: 0,
-        color: "amber",
-        onClick: () => {}
-      });
-    }, 4000);
-    setTimeout(function() {
-      $notify({
-        title: "Item created sucessfully",
-        details: "Your item was created",
-        // iconRight: "arrow_forward",
-        iconMain: "check",
-        delay: 0,
-        color: "green",
-        onclick: "sadfasdfa"
-      });
-    }, 5000);
-    setTimeout(function() {
-      $notify({
-        title: "New mention",
-        details: "Click to see the comment",
-        iconRight: "arrow_forward",
-        iconMain: "message",
-        color: "blue",
-        delay: 0,
-        onClick: () => {
-          $router.push("/activity");
-        }
-      });
-    }, 6000);
-    setTimeout(function() {
-      $notify({
-        title: "Two factor authentication",
-        details: "Click to enable 2FA ",
-        iconRight: "edit",
-        iconMain: "lock",
-        delay: 0,
-        onClick: () => {}
-      });
-    }, 7000);
   }
 };
 </script>

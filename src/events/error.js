@@ -9,7 +9,11 @@ const handleError = error => {
     console.error(error.error); //eslint-disable-line no-console
   }
   if (!isEmpty(error.notify)) {
-    notify.alert(error.notify);
+    notify({
+      title: error.notify,
+      color: "red",
+      iconMain: "error"
+    });
   }
 };
 
